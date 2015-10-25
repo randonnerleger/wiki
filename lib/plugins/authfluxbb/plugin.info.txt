@@ -1,0 +1,7 @@
+base   authfluxbb
+author Andreas Gohr & Adaur
+email  -
+date   -
+name   FluxBB Auth Plugin
+desc   Provides user authentication using FluxBB database
+url    http://fluxbb.org/forums/viewtopic.php?pid=58104#p58104
