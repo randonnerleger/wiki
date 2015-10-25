@@ -28,6 +28,47 @@ Screen Styles for the Wrap Plugin (additional to all.css)
     padding: 0 .3em;
 }
 
+/*************************************/
+/* Modif RL : boites de hauteur fixe */
+.dokuwiki div.wrap_box200h,
+.dokuwiki div.wrap_box280h,
+.dokuwiki div.wrap_box320h,
+.dokuwiki div.wrap_box350h
+ {
+    background: #eee;
+    border: 1px solid grey;
+    overflow: auto;
+    text-align: center;
+    margin-bottom: 15px;
+    padding-top: 5px;
+}
+
+.dokuwiki div.wrap_box200h ul,
+.dokuwiki div.wrap_box280h ul,
+.dokuwiki div.wrap_box320h ul,
+.dokuwiki div.wrap_box350h ul
+ {
+    text-align: left;
+}
+
+.dokuwiki div.wrap_box200h {
+    height: 200px;
+}
+
+.dokuwiki div.wrap_box280h {
+    height: 280px;
+}
+
+.dokuwiki div.wrap_box320h {
+    height: 320px;
+}
+
+.dokuwiki div.wrap_box350h {
+    height: 350px;
+}
+/* Fin Modif RL : boites de hauteur fixe */
+/*************************************/
+
 /*____________ notes with icons ____________*/
 
 /* general styles for all note divs */
