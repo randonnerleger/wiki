@@ -1,0 +1,25 @@
+/* Modif couleur sujets épinglés */
+.stickytext {color:red; font-weight:bold;}
+/****************************************************************/
+/* 1.bis PARAMETRES du BANDEAU */
+/****************************************************************/
+
+#bandeau {
+	border-left: 1px solid #0066b9;
+	border-right: 1px solid #0066b9;
+	background: url(../../../../forum/style/Air/img/bandeau3.jpg) repeat-x;
+    height: 60px;
+	margin: 0 0 0 155px;
+}
+
+#bandeau #searche {
+	text-align: center;
+	float: right;
+	margin-top: 64px;
+	height: 22px;
+	border: 0;
+	padding: 2px 4px 0 0;
+	font: 80% "Lucida Grande", Verdana, Lucida, Helvetica, Arial, sans-serif;
+}
+
+#bandeau #searche input {padding:0;}
