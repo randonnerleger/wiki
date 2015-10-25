@@ -26,6 +26,10 @@ $showSidebar = $hasSidebar && ($ACT=='show');
 </head>
 
 <body>
+<!-- Modif RL : inclusion du bandeau et du menu gauche -->
+<?php /*old includehook*/ @include(dirname(__FILE__).'/topheader.html')?>
+<?php /*old includehook*/ @include(dirname(__FILE__).'/sidebar2.html')?>
+<!-- Fin modif -->
     <!--[if lte IE 8 ]><div id="IE8"><![endif]-->
     <div id="dokuwiki__site"><div id="dokuwiki__top" class="site <?php echo tpl_classes(); ?> <?php
         echo ($showSidebar) ? 'showSidebar' : ''; ?> <?php echo ($hasSidebar) ? 'hasSidebar' : ''; ?>">
