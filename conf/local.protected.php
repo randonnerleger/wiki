@@ -1,5 +1,5 @@
 <?php
-define('PUN_ROOT', dirname(__FILE__).'/../../forum_new/');
+define('PUN_ROOT', dirname(__FILE__).'/../../forum/');
 include PUN_ROOT.'include/common.php';
  
 $conf['useacl'] = 1;
