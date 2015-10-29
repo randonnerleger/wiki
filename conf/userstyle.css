@@ -1,0 +1,62 @@
+/* Fichier ajoute pour style RL
+ 
+Extension des styles du plugin WRAP.
+
+E.g. if you need a <WRAP myclass>, you edit (or create if it doesn't exist) your conf/userstyle.css and add your .wrap_myclass{} with its style definitions to it.
+*/
+
+.wrap_box120h,
+.wrap_box160h,
+.wrap_box200h,
+.wrap_box240h,
+.wrap_box280h,
+.wrap_box320h,
+.wrap_box360h
+ {
+    background: #eee;
+    border: 1px solid grey;
+    overflow: auto;
+    text-align: center;
+    margin-bottom: 15px;
+    padding-top: 5px;
+}
+
+.wrap_box120h ul,
+.wrap_box160h ul,
+.wrap_box200h ul,
+.wrap_box240h ul,
+.wrap_box280h ul,
+.wrap_box320h ul,
+.wrap_box360h ul
+ {
+    text-align: left;
+    padding-left : 0;
+}
+
+.wrap_box120h {
+    height: 120px;
+}
+
+.wrap_box160h {
+    height: 160px;
+}
+
+.wrap_box200h {
+    height: 200px;
+}
+
+.wrap_box240h {
+    height: 240px;
+}
+
+.wrap_box280h {
+    height: 280px;
+}
+
+.wrap_box320h {
+    height: 320px;
+}
+
+.wrap_box360h {
+    height: 360px;
+}
