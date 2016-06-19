@@ -1,0 +1,65 @@
+# Base de données: `mul`
+# 
+CREATE DATABASE `mul`;
+USE mul;
+
+# --------------------------------------------------------
+
+#
+# Structure de la table `backup`
+#
+
+CREATE TABLE `backup` (
+  `num` int(11) NOT NULL auto_increment,
+  `categorie` varchar(30) NOT NULL default '',
+  `marque` varchar(30) NOT NULL default '',
+  `nom` varchar(30) NOT NULL default '',
+  `utilisateur` varchar(30) NOT NULL default '',
+  `poids` float NOT NULL default '0',
+  `rq` text NOT NULL,
+  `date` varchar(16) NOT NULL default '',
+  PRIMARY KEY  (`num`)
+) TYPE=MyISAM;
+
+# --------------------------------------------------------
+
+#
+# Structure de la table `categories`
+#
+
+CREATE TABLE `categories` (
+  `NumCat` int(11) NOT NULL auto_increment,
+  `NomCat` varchar(30) NOT NULL default '',
+  PRIMARY KEY  (`NumCat`)
+) TYPE=MyISAM;
+
+# --------------------------------------------------------
+
+#
+# Structure de la table `marques`
+#
+
+CREATE TABLE `marques` (
+  `NumMarq` int(11) NOT NULL auto_increment,
+  `NomMarq` varchar(30) NOT NULL default '',
+  PRIMARY KEY  (`NumMarq`)
+) TYPE=MyISAM;
+
+# --------------------------------------------------------
+
+#
+# Structure de la table `poids_mat`
+#
+
+CREATE TABLE `poids_mat` (
+  `num` int(11) NOT NULL auto_increment,
+  `categorie` varchar(30) NOT NULL default '',
+  `marque` varchar(30) NOT NULL default '',
+  `nom` varchar(30) NOT NULL default '',
+  `utilisateur` varchar(30) NOT NULL default '',
+  `poids` float NOT NULL default '0',
+  `rq` text NOT NULL,
+  `date` varchar(16) NOT NULL default '',
+  PRIMARY KEY  (`num`)
+) TYPE=MyISAM;
+    
