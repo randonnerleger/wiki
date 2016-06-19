@@ -1,7 +1,5 @@
 <?
-include 'connect_bdd.php';
-
-//nettoyage des signes dangeureux
+//Nettoyage des signes dangereux
 
 $motif='`[][<>{}!\$?\*\|\"\^=/:\`;&#%]`';
 
