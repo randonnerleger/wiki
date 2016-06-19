@@ -11,7 +11,7 @@ body {
 }
 
 /* hide certain sections */
-#menugauche, /* Modif RL */
+#dokuwiki__aside, /* Modif RL */
 .a11y,
 audio,
 video,

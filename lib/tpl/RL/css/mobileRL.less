@@ -1,0 +1,34 @@
+/* for screen widths in the tablet range
+********************************************************************/
+@media only screen and (max-width: @ini_tablet_width) {
+
+	#screen__mode {
+		z-index: 1; /* for detecting media queries in JavaScript (see script.js) */
+	}
+
+	/* toc */
+	#dw__toc {
+		float: none;
+		margin: 0 0 1em 0;
+		width: auto;
+		border-left-width: 0;
+		border-bottom: 1px solid @ini_border;
+	}
+	[dir=rtl] #dw__toc {
+		float: none;
+		margin: 0 0 1em 0;
+		border-right-width: 0;
+	}
+
+	.dokuwiki h3.toggle {
+		padding: 10px;
+	}
+	#dw__toc > div,
+	#dokuwiki__aside div.content {
+		padding: .2em 0 .5em;
+	}
+	#dw__toc ul li div.li {
+	    padding: 5px;
+	}
+
+} /* /@media */
