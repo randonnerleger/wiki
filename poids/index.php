@@ -86,7 +86,7 @@ END SUP RL -->
 				<div class="pad group">
 					<div class="page group">
 					<h1>Mesures du poids du matériel de randonnée</h1>
-					<?include 'poids.php';?>
+					<div class="wrap_center wrap_round wrap_important plugin_wrap" style="width: 80%; text-align:center;font-weight:bold;"><p>Page en maintenance</p></div>
 					</div>
 				</div>
 			</div>
