@@ -27,7 +27,6 @@ header('X-UA-Compatible: IE=edge,chrome=1');
 </head>
 
 <body>
-    <!--[if lte IE 8 ]><div id="IE8"><![endif]-->
     <div id="dokuwiki__site"><div id="dokuwiki__top" class="site <?php echo tpl_classes(); ?>">
 
         <?php include('tpl_header.php') ?>
@@ -93,24 +92,7 @@ header('X-UA-Compatible: IE=edge,chrome=1');
                     <h3 class="a11y"><?php echo $lang['page_tools']; ?></h3>
                     <div class="tools">
                         <ul>
-                            <?php
-                                $data = array(
-                                    'view' => 'detail',
-                                    'items' => array(
-                                        'mediaManager' => tpl_action('mediaManager', true, 'li', true, '<span>', '</span>'),
-                                        'img_backto' =>   tpl_action('img_backto',   true, 'li', true, '<span>', '</span>'),
-                                    )
-                                );
-
-                                // the page tools can be amended through a custom plugin hook
-                                $evt = new Doku_Event('TEMPLATE_PAGETOOLS_DISPLAY', $data);
-                                if($evt->advise_before()) {
-                                    foreach($evt->data['items'] as $k => $html) echo $html;
-                                }
-                                $evt->advise_after();
-                                unset($data);
-                                unset($evt);
-                            ?>
+                            <?php echo (new \dokuwiki\Menu\DetailMenu())->getListItems(); ?>
                         </ul>
                     </div>
                 </div>
@@ -119,7 +101,5 @@ header('X-UA-Compatible: IE=edge,chrome=1');
 
         <?php include('tpl_footer.php') ?>
     </div></div><!-- /site -->
-
-    <!--[if lte IE 8 ]></div><![endif]-->
 </body>
 </html>
