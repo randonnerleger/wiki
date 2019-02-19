@@ -23,8 +23,8 @@ $showSidebar = $hasSidebar && ($ACT=='show');
     <?php
     # BEGIN MODIF FAVICON RL
     # Opitux, le 4 nov. 2015
-    # Sup des favicons appelés par Dokuwiki, on appelle les notre juste en dessous 
-    # echo tpl_favicon(array('favicon', 'mobile')) 
+    # Sup des favicons appelés par Dokuwiki, on appelle les notre juste en dessous
+    # echo tpl_favicon(array('favicon', 'mobile'))
     # END MODIF FAVICON RL
     ?>
     <?php tpl_includeFile('meta.html') ?>
@@ -32,7 +32,7 @@ $showSidebar = $hasSidebar && ($ACT=='show');
 <!-- BEGIN MODIF META RL -->
 	<?php include PUN_ROOT.'include/user/header_favicon.php';?>
 	<?php include PUN_ROOT.'include/user/header_img_aleatoire.php';?>
-	<link rel="stylesheet" type="text/css" href="<?php echo path_to_forum.'style/'.$conf['pun_style'].'.css'; ?>" />
+	<link rel="stylesheet" type="text/css" href="<?php echo path_to_forum.'style/'.$conf['pun_style'].'.css?' . current_theme . ''; ?>" />
 <!-- BEGIN MODIF META RL -->
 </head>
 <body>
@@ -99,5 +99,6 @@ $showSidebar = $hasSidebar && ($ACT=='show');
 
     <div class="no"><?php tpl_indexerWebBug() /* provide DokuWiki housekeeping, required in all templates */ ?></div>
     <div id="screen__mode" class="no"></div><?php /* helper to detect CSS media query in script.js */ ?>
+	<?php include PUN_ROOT.'include/user/footer.php';?>
 </body>
 </html>
