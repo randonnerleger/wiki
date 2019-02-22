@@ -46,15 +46,14 @@ function html_login($svg = false){
     global $INPUT;
 
 	// Opitux, modification pour rediriger vers la connection forum dans le wiki
-	// print p_locale_xhtml('login');
-    // print '<div class="centeralign">'.NL;
-	// die('<div style="text-align:left;"><p>Vous devez être identifié au forum pour accéder à ces pages.<br />Redirection&#160;…<br /><br /><a href="' . folder_rl . '/' . folder_forum . '/login.php">Cliquez ici si vous ne voulez pas attendre (ou si votre navigateur ne vous redirige pas automatiquement).</a></p><script>setTimeout(function(){window.location.href = "' . folder_rl . '/forum/login.php";},100000);</script></div>');
-	// // END Opitux
+	//  print p_locale_xhtml('login');
+	//  print '<div class="centeralign">'.NL;
+	//  $form = new Doku_Form(array('id' => 'dw__login'));
 	require ('../login.php');
 	echo '</div></div></div></div></div></div>';
 	require ('../forum/include/user/footer.php');
 	exit;
-
+	// END Opitux
     $form = new Doku_Form(array('id' => 'dw__login'));
     $form->startFieldset($lang['btn_login']);
     $form->addHidden('id', $ID);
