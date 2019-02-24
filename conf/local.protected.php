@@ -10,17 +10,24 @@ $conf['superuser'] = '@Administrateurs';
 $conf['authtype'] = 'authfluxbb';
 $conf['disableactions'] = 'register,resendpwd,profile,login,logout';
 
-// Config Forum utilisés dans le menu gauche
+// Config Forum utilisÃ©es dans le menu gauche
 $conf['pun_style'] = $pun_user['style'];
 $conf['group_id'] = $pun_user['group_id'];
 $conf['id'] = $pun_user['id'];
 
-		// Redirection temporaire si forum en maintenance
-		if ($pun_config['o_maintenance'] == '1') {
-			header('Location: ' . path_to_forum . 'index.php', true, 302);
-			// OR: header('Location: ' . path_to_forum . 'index.php');
-			// OR: header('Location: ' . path_to_forum . 'index.php', true, 302);
-			exit;
-		}
-		// Fin de la Redirection temporaire
+// Redirection temporaire si forum en maintenance
+if ($pun_config['o_maintenance'] == '1' &&  $pun_user['group_id'] != 1) {
+	header('HTTP/1.1 503 Service Unavailable');
 
+	// Send no-cache headers
+	header('Expires: Thu, 21 Jul 1977 07:30:00 GMT'); // When yours truly first set eyes on this world! :)
+	header('Last-Modified: '.gmdate('D, d M Y H:i:s').' GMT');
+	header('Cache-Control: post-check=0, pre-check=0', false);
+	header('Pragma: no-cache'); // For HTTP/1.0 compatibility
+
+	// Send the Content-type header in case the web server is setup to send something else
+	header('Content-type: text/html; charset=utf-8');
+	require_once( RL_ROOT . '../maintenance.php');
+	exit;
+}
+// Fin de la Redirection temporaire
