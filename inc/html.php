@@ -54,6 +54,7 @@ function html_login($svg = false){
 	require ('../forum/include/user/footer.php');
 	exit;
 	// END Opitux
+
     $form = new Doku_Form(array('id' => 'dw__login'));
     $form->startFieldset($lang['btn_login']);
     $form->addHidden('id', $ID);
